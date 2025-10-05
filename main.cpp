@@ -44,17 +44,18 @@ Node* insertTail(Node *head, float numrate, string comment){
 
 void print(Node *head){
     Node* curr = head;
-    int i=0;
+    float sum = 0;
+    int i = 0;
 
     while (curr->next != nullptr)
         {
-            cout<<"review #" << i+1 <<":  " << curr->rating <<":  " <<curr
-
-
-
-            curr = curr->next;
+            cout<<"review #" << i+1 <<":  " << curr->rating <<":  " <<curr->comment <<"\n";
             i++;
+            sum += curr->rating;
+            curr = curr->next;
         }
+
+
 }
 
 int main(){
