@@ -6,3 +6,19 @@ struct Node{
     Node *next;
 };
 
+Node* insertHead(){
+
+
+}
+
+Node* insertTail(){
+
+
+}
+
+int main(){
+
+
+    
+}
+
