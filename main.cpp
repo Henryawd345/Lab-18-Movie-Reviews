@@ -44,21 +44,24 @@ Node* insertTail(Node *head, float numrate, string comment){
 
 void print(Node *head){
     Node* curr = head;
-    float sum = 0;
+    float sum = 0.0;
+    int count = 0;
     int i = 0;
 
     while (curr->next != nullptr)
         {
-            cout<<"review #" << i+1 <<":  " << curr->rating <<":  " <<curr->comment <<"\n";
+            cout<<"Review #" << i+1 <<"  Rating:  " << curr->rating <<"  Comment:  " <<curr->comment <<"\n";
             i++;
             sum += curr->rating;
+            count++;
             curr = curr->next;
         }
+        if (count) cout << "  > Average: " << (sum / count) << "\n";
 }
 
 int main(){
     Node *head = nullptr;
-    int tmpRate;
+    float tmpRate;
     string tmpComm;
     string anoReview;
     int choices;
@@ -79,7 +82,6 @@ int main(){
         cout<<"Enter review comments: ";
         getline(cin, tmpComm);
         
-
         if (choices == 1){
             head = insertHead(head, tmpRate, tmpComm);
         }else if (choices == 2){
