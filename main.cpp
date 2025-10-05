@@ -26,6 +26,7 @@ Node* insertTail(Node *head, float numrate, string comment){
     Node* newNode = new Node;
     newNode->rating = numrate;
     newNode->comment = comment;
+    newNode->next = nullptr;
     
 
     if (head == nullptr){
@@ -50,8 +51,7 @@ void print(Node *head){
 
     while (curr->next != nullptr)
         {
-            cout<<"Review #" << i+1 <<"  Rating:  " << curr->rating <<"  Comment:  " <<curr->comment <<"\n";
-            i++;
+            cout<<"Review #" << i++ <<"  Rating:  " << curr->rating <<"  Comment:  " <<curr->comment <<"\n";
             sum += curr->rating;
             count++;
             curr = curr->next;
