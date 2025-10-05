@@ -36,10 +36,25 @@ Node* insertTail(Node *head, float numrate, string comment){
         while (curr->next != nullptr)
         {
             curr = curr->next;
-            curr->next = newNode;
         }
+            curr->next = newNode;
     }
     return head;
+}
+
+void print(Node *head){
+    Node* curr = head;
+    int i=0;
+
+    while (curr->next != nullptr)
+        {
+            cout<<"review #" << i+1 <<":  " << curr->rating <<":  " <<curr
+
+
+
+            curr = curr->next;
+            i++;
+        }
 }
 
 int main(){
