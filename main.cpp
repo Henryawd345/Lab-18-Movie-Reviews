@@ -47,11 +47,11 @@ void print(Node *head){
     Node* curr = head;
     float sum = 0.0;
     int count = 0;
-    int i = 0;
+    int i = 1;
 
-    while (curr->next != nullptr)
+    while (curr)
         {
-            cout<<"Review #" << i++ <<"  Rating:  " << curr->rating <<"  Comment:  " <<curr->comment <<"\n";
+            cout<<"  > Review #" << i++ <<"Rating:  " << curr->rating <<"  Comment:  " <<curr->comment <<"\n";
             sum += curr->rating;
             count++;
             curr = curr->next;
