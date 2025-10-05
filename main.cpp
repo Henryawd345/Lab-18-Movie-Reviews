@@ -7,30 +7,39 @@ struct Node{
     Node *next;
 };
 
-Node* insertHead(Node *head, float number, string comment){
-    Node *head = nullptr;
+Node* insertHead(Node *head, float numrate, string comment){
+    Node* newNode = new Node;
+    newNode->rating = numrate;
+    newNode->comment = comment;
 
-    for (int i = 0; i < 3; i++){
-        Node *newVal = new Node;
-
-        if (!head) {
-            head = newVal;
-            newVal->next = nullptr;
-        }
-        else {
-            newVal->next = head;
-            head = newVal;
-        }
+    if (head == nullptr){
+        head = newNode;     
+    }
+    else{
+        newNode->next = head;
+        head = newNode;
     }
     return head;
 }
 
-Node* insertTail(){
+Node* insertTail(Node *head, float numrate, string comment){
 
+
+
+    
     return NULL;
 }
 
 int main(){
+    Node *head = nullptr;
+    int tmp;
+    int choices;
+
+    for (int i = 0; i < 3; i++){
+    
+
+    }
+
 
 
     return 0;
