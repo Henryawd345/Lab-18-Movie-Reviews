@@ -54,13 +54,13 @@ void print(Node *head){
             sum += curr->rating;
             curr = curr->next;
         }
-
-
 }
 
 int main(){
     Node *head = nullptr;
-    int tmp;
+    int tmpRate;
+    string tmpComm;
+    string anoReview;
     int choices;
 
     cout<<"Which linked list method should we use?"<<"\n";
@@ -70,12 +70,40 @@ int main(){
     cin>> choices ;
     cin.ignore();
 
-
-    for (int i = 0; i < 3; i++){
+    if (choices == 1){
+        insertHead(head, tmpRate, tmpComm);
+    }else if (choices == 2){
+        insertTail(head, tmpRate, tmpComm);
+    }else{
+        cout<< "Please input a valid input ";
+    }
     
+    while (true)
+    {
+        cout<<"Enter review rating 0-5: ";
+        cin>>tmpRate;
+        cin.ignore();
+        cout<<"Enter review comments: ";
+        getline(cin, tmpComm);
+
+        cout<<"Enter another review? Y/N: ";
+        getline(cin, anoReview);
+
+        if ((anoReview == "y") || (anoReview == "Y")){
+            continue;
+        }else if((anoReview == "n") || (anoReview == "N")){
+            break;
+        }else{
+            cout<< "try input the correct one" << "\n";
+        }
+
+
+
+
+
 
     }
-
+    
 
 
     return 0;
