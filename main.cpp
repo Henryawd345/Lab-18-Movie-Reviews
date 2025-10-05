@@ -11,6 +11,7 @@ Node* insertHead(Node *head, float numrate, string comment){
     Node* newNode = new Node;
     newNode->rating = numrate;
     newNode->comment = comment;
+    newNode->next = nullptr;
 
     if (head == nullptr){
         head = newNode;     
@@ -51,7 +52,7 @@ void print(Node *head){
 
     while (curr)
         {
-            cout<<"  > Review #" << i++ <<"Rating:  " << curr->rating <<"  Comment:  " <<curr->comment <<"\n";
+            cout<<"  > Review #" << i++ <<"  Rating:  " << curr->rating <<"  Comment:  " <<curr->comment <<"\n";
             sum += curr->rating;
             count++;
             curr = curr->next;
