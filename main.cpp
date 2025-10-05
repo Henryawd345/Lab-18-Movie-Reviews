@@ -69,42 +69,37 @@ int main(){
     cout<<"Choices: ";
     cin>> choices ;
     cin.ignore();
-
-    if (choices == 1){
-        insertHead(head, tmpRate, tmpComm);
-    }else if (choices == 2){
-        insertTail(head, tmpRate, tmpComm);
-    }else{
-        cout<< "Please input a valid input ";
-    }
     
     while (true)
     {
         cout<<"Enter review rating 0-5: ";
         cin>>tmpRate;
         cin.ignore();
+
         cout<<"Enter review comments: ";
         getline(cin, tmpComm);
+        
+
+        if (choices == 1){
+            head = insertHead(head, tmpRate, tmpComm);
+        }else if (choices == 2){
+            head = insertTail(head, tmpRate, tmpComm);
+        }else{
+            cout<< "Please input a valid input ";
+        }
 
         cout<<"Enter another review? Y/N: ";
         getline(cin, anoReview);
-
         if ((anoReview == "y") || (anoReview == "Y")){
             continue;
         }else if((anoReview == "n") || (anoReview == "N")){
             break;
         }else{
             cout<< "try input the correct one" << "\n";
+            break;
         }
-
-
-
-
-
-
     }
-    
-
+    print(head);
 
     return 0;
 }
