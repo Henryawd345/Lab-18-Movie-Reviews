@@ -8,17 +8,17 @@ struct Node{
 
 Node* insertHead(){
 
-
+    return NULL;
 }
 
 Node* insertTail(){
 
-
+    return NULL;
 }
 
 int main(){
 
 
-    
+    return 0;
 }
 
